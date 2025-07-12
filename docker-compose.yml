@@ -11,3 +11,17 @@ services:
       - "15432:5432"
     volumes:
       - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+  summarizer:
+    build: .
+    container_name: summarizer
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=15432
+      - DB_NAME=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - .:/app
+    command: ["python", "summarize_reviews.py"]
