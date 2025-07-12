@@ -1,4 +1,5 @@
 # SQL and NLP Pipeline Setup
+Setting up for a review webapp.
 Contains Docker container for setting up data schema and seed, and the pipeline to Python to create a summary for a given ID using local LLM (Mistral)    
 Arbitrarily set port as 15432 to avoid conflict with 5432- you may need to set a different port in yml if you're already using 15432  
 
