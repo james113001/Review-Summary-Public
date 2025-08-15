@@ -9,7 +9,7 @@ load_dotenv()
 # ------------------------------------
 # CONFIGURATION
 # ------------------------------------
-DB_HOST = 'localhost'
+DB_HOST = 'db'
 DB_PORT = 15432
 DB_NAME = os.getenv("POSTGRES_DB")
 DB_USER = os.getenv("POSTGRES_USER")
