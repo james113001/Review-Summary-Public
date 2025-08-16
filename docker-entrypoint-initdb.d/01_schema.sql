@@ -21,7 +21,7 @@ CREATE TABLE product (
 CREATE TABLE reviews (
     id SERIAL PRIMARY KEY,
     user_id INTEGER REFERENCES users(id),
-    id INTEGER REFERENCES product(id),
+    product_id INTEGER REFERENCES product(id),
     overall_rating INTEGER CHECK (overall_rating BETWEEN 1 AND 5),
     would_recommend BOOLEAN,
     free_text TEXT,
