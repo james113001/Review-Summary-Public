@@ -1,0 +1,7 @@
+psycopg2-binary
+ollama
+dotenv
+fastapi
+uvicorn
+pydantic
+email-validator
